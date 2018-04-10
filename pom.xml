@@ -51,6 +51,9 @@
             <!-- Minimal supported version is 2.4 -->
             <version>2.13</version>
             <configuration>
+				<failOnMissingWebXml>false</failOnMissingWebXml>
+			</configuration>
+            <configuration>
               <properties>
                 <property>
                   <name>listener</name>
