@@ -26,6 +26,20 @@
           <scope>test</scope>
       </dependency>
   </dependencies>
+	<build>
+	<plugins>
+		
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<version>2.6</version>
+			<configuration>
+				<failOnMissingWebXml>false</failOnMissingWebXml>
+			</configuration>
+		</plugin>
+		
+	</plugins>
+  </build>	
     <build>
         <finalName>java-example</finalName>
         <plugins>
@@ -50,10 +64,7 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <!-- Minimal supported version is 2.4 -->
             <version>2.13</version>
-            <configuration>
-				<failOnMissingWebXml>false</failOnMissingWebXml>
-			</configuration>
-            <configuration>
+             <configuration>
               <properties>
                 <property>
                   <name>listener</name>
